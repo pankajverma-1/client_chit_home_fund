@@ -1,0 +1,238 @@
+<div className="h3">Register</div>
+<Form className="m-2 m-sm-5 w-75">
+    <Form.Group className="mb-3" controlId="firstName">
+        <Form.Label>First Name</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="firstName" type="text" placeholder="Enter Name" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="fatherName">
+        <Form.Label>Father Name</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="fatherName" type="text" placeholder="Enter Father Name" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="address">
+        <Form.Label>Address</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="address" type="text" placeholder="Enter Address" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="AadharNumber">
+        <Form.Label>Aadhar Number</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="AadharNumber" type="text" placeholder="Enter Aadhar Number" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="AadharPhoto">
+        <Form.Label>Aadhar Photo</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="AadharPhoto" type="file" placeholder="Select Aadhar Photo" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="AccountNumber">
+        <Form.Label>Account Number</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="AccountNumber" type="text" placeholder="Enter Account Number" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="bankPassbook">
+        <Form.Label>Bank Passbook Photo</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="bankPassbook" type="file" placeholder="Select Bank Passbook Photo" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="PanNumber">
+        <Form.Label>PAN Number</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="PanNumber" type="text" placeholder="Enter Pan Number" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="panCard">
+        <Form.Label>Pan Card Photo</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="panCard" type="file" placeholder="Select Pan Card Photo" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="passportSizePhoto">
+        <Form.Label>Passport Size Photo</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="passportSizePhoto" type="file" placeholder="Select Passport Size Photo" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="signature">
+        <Form.Label>Signature Photo</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="signaturePhoto" type="file" placeholder="Select Signature Photo" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="password">
+        <Form.Label>Choose Password</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="choosePassword" type="password" placeholder="Enter  Password" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="CPassword">
+        <Form.Label>Conform Password</Form.Label>
+        <Form.Control onChange={onChangeHandler} name="conformPassword" type="password" placeholder="Re Enter Password" />
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check onChange={onChangeHandler} name="formBasicCheckbox" type="checkbox" label="Check me out" />
+    </Form.Group>
+
+    <Button variant="primary" onClick={SubmitHandler}>
+        Submit
+    </Button>
+    <Link to="../login" className="ms-2 text-decoration-none"> Account Already Present ?
+    </Link>
+</Form>
+<div className="col-12">
+    <TextField onChange={onChangeHandler} name="firstName" type="text" placeholder="Enter Name" variant="standard" className="my-3 w-100 " />
+    <TextField onChange={onChangeHandler} name="fatherName" type="text" placeholder="Enter Father Name" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="address" type="text" placeholder="Enter Address" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="AadharNumber" type="text" placeholder="Enter Aadhar Number" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="AadharPhoto" type="file" placeholder="Select Aadhar Photo" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="AccountNumber" type="text" placeholder="Enter Account Number" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="bankPassbook" type="file" placeholder="Select Bank Passbook Photo" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="PanNumber" type="text" placeholder="Enter Pan Number" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="panCard" type="file" placeholder="Select Pan Card Photo" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="passportSizePhoto" type="file" placeholder="Select Passport Size Photo" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="signaturePhoto" type="file" placeholder="Select Signature Photo" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="choosePassword" type="password" placeholder="Enter  Password" variant="standard" className="my-3 w-100" />
+    <TextField onChange={onChangeHandler} name="conformPassword" type="password" placeholder="Re Enter Password" variant="standard" className="my-3 w-100" />
+    <Form.Check onChange={onChangeHandler} name="formBasicCheckbox" type="checkbox" label="Check me out" />
+    <Button variant="primary" onClick={SubmitHandler}>
+        Submit
+    </Button>
+    <Link to="../login" className="ms-2 text-decoration-none"> Account Already Present ?
+    </Link>
+    \
+</div>
+
+
+<img src={photo} alt="loginImage" className=" img-fluid rounded-top" />
+<div className="overlay2"></div>
+
+
+
+
+import { Avatar } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Collapse } from 'react-bootstrap';
+import './Notification.css';
+
+const Notification = () => {
+  const [open, setOpen] = useState(false);
+  const photo =
+    'https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80';
+  return (
+    <>
+      <div className="d-flex flex-column align-content-center h-100 w-75">
+        <div className="h1 text-start" style={{ color: 'cornflowerblue' }}>
+          Notification
+        </div>
+        <div className="notification-item shadow-lg p-3 bg-body rounded">
+          <div
+            onClick={() => setOpen(!open)}
+            aria-controls="example-collapse-text"
+            aria-expanded={open}
+            className="px-3"
+          >
+            <div className="row">
+              <div className="col-12 col-sm-4 col-md-2">
+                <Avatar
+                  alt="Remy Sharp"
+                  src={photo}
+                  style={{ width: '100px', height: '100px' }}
+                  className="m-auto"
+                />
+              </div>
+              <div className="col-12 col-sm-8 col-md-10 ps-md-5 ps-lg-0  d-flex flex-column justify-content-center">
+                <div className="h4 text-center text-sm-start">By Host Name</div>
+                <p
+                  style={{ fontSize: '1.2rem' }}
+                  className={!open ? 'text-truncate d-block mb-0' : 'd-none'}
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt veniam ipsa perspiciatis maiores laboriosam culpa
+                  eos? Deleniti porro architecto dolorum!
+                </p>
+                <p style={{ fontSize: '1rem' }}>10 min ago</p>
+              </div>
+            </div>
+          </div>
+          <Collapse in={open} className="mx-3">
+            <div id="example-collapse-text" style={{ fontSize: '1.2rem' }}>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente
+              ea proident.
+            </div>
+          </Collapse>
+        </div>
+        <div className="notification-item shadow-lg p-3 bg-body rounded">
+          <div
+            onClick={() => setOpen(!open)}
+            aria-controls="example-collapse-text1"
+            aria-expanded={open}
+            className="px-3"
+          >
+            <div className="row">
+              <div className="col-12 col-sm-4 col-md-2">
+                <Avatar
+                  alt="Remy Sharp"
+                  src={photo}
+                  style={{ width: '100px', height: '100px' }}
+                  className="m-auto"
+                />
+              </div>
+              <div className="col-12 col-sm-8 col-md-10 ps-md-5 ps-lg-0  d-flex flex-column justify-content-center">
+                <div className="h4 text-center text-sm-start">By Host Name</div>
+                <p
+                  style={{ fontSize: '1.2rem' }}
+                  className={!open ? 'text-truncate d-block mb-0' : 'd-none'}
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt veniam ipsa perspiciatis maiores laboriosam culpa
+                  eos? Deleniti porro architecto dolorum!
+                </p>
+                <p style={{ fontSize: '1rem' }}>10 min ago</p>
+              </div>
+            </div>
+          </div>
+          <Collapse in={open} className="mx-3">
+            <div id="example-collapse-text1" style={{ fontSize: '1.2rem' }}>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente
+              ea proident.
+            </div>
+          </Collapse>
+        </div>
+        <div className="notification-item shadow-lg p-3 bg-body rounded">
+          <div
+            onClick={() => setOpen(!open)}
+            aria-controls="example-collapse-text2"
+            aria-expanded={open}
+            className="px-3"
+          >
+            <div className="row">
+              <div className="col-12 col-sm-4 col-md-2">
+                <Avatar
+                  alt="Remy Sharp"
+                  src={photo}
+                  style={{ width: '100px', height: '100px' }}
+                  className="m-auto"
+                />
+              </div>
+              <div className="col-12 col-sm-8 col-md-10 ps-md-5 ps-lg-0  d-flex flex-column justify-content-center">
+                <div className="h4 text-center text-sm-start">By Host Name</div>
+                <p
+                  style={{ fontSize: '1.2rem' }}
+                  className={!open ? 'text-truncate d-block mb-0' : 'd-none'}
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt veniam ipsa perspiciatis maiores laboriosam culpa
+                  eos? Deleniti porro architecto dolorum!
+                </p>
+                <p style={{ fontSize: '1rem' }}>10 min ago</p>
+              </div>
+            </div>
+          </div>
+          <Collapse in={open} className="mx-3">
+            <div id="example-collapse-text2" style={{ fontSize: '1.2rem' }}>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente
+              ea proident.
+            </div>
+          </Collapse>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Notification;

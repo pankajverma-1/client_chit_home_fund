@@ -1,0 +1,70 @@
+.popup-content {
+    max-width: 75vw !important;
+}
+
+.popup-overlay {
+    background: rgb(172, 235, 247);
+    background: linear-gradient(126deg, rgba(172, 235, 247, 0.7235936610972514) 32%, rgba(255, 255, 255, 0.7235936610972514) 100%);
+}
+
+.terms:hover {
+    cursor: pointer;
+}
+
+
+/* scrollbar Style */
+
+.modal1 ::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+/* Track */
+
+.modal1 ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+.modal1 ::-webkit-scrollbar-thumb {
+    background: #0dcaf0;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+.modal1 ::-webkit-scrollbar-thumb:hover {
+    background: #00aed1;
+    ;
+}
+
+.modal1 Button {
+    background: rgb(172, 235, 247);
+    color: black;
+    background: linear-gradient(126deg, rgba(172, 235, 247, 0.7235936610972514) 32%, rgba(255, 255, 255, 0.7235936610972514) 100%);
+}
+
+.modal1>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal1>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}

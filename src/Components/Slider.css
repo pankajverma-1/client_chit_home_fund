@@ -1,0 +1,38 @@
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: .7;
+}
+
+.legend {
+    opacity: 2 !important;
+    bottom: auto !important;
+    width: auto !important;
+    background: none !important;
+    top: 5rem;
+    left: 55% !important;
+    text-align: left !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .legend {
+        opacity: 2 !important;
+        bottom: 10px !important;
+        background: none !important;
+        top: unset;
+        left: 55% !important;
+        text-align: left !important;
+        padding: 0;
+    }
+    .legend .h2 {
+        font-size: 2rem;
+    }
+    .legend .h4 {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,14 @@
+.collapsed {
+    padding: 0.75rem 2rem;
+    position: unset;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: unset;
+    background-color: unset;
+    box-shadow: unset;
+}
